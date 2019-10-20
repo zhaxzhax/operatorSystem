@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Process scheduling</title>
+    <link rel="stylesheet" href="operatorSystem.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+</head>
+<body>
+<div id="vueRoot">
+    <img id="backGround" class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="50%" height="50%">
+    <div id="longTermready" class="col-sm-2">
+        <div class="label label-primary">Long term schedule ready queue</div>
+        <ul class="list-group" id="lready">
+            
+                <li class="list-group-item">进程1</li>
+            
+            
+                <li class="list-group-item">进程2</li>
+            
+            
+                <li class="list-group-item">进程3</li>
+            
+            
+                <li class="list-group-item">进程4</li>
+            
+        </ul>
+    </div>
+    <div id="longTermrun">
+        <div class="col-sm-2" id="jobReady">
+            <div class="label label-primary">job schedule ready queue</div>
+            <ul class="list-group" >
+
+                    <li class="list-group-item">进程1</li>
+
+
+                    <li class="list-group-item">进程2</li>
+
+
+                    <li class="list-group-item">进程3</li>
+
+
+                    <li class="list-group-item">进程4</li>
+
+            </ul>
+        </div>
+        <div id="jobRun">
+            <div class="label label-primary">job running</div>
+            <div >进程5</div>
+        </div>
+        <div class="col-sm-2" id="jobSuspend">
+        <div class="label label-primary">job schedule suspend queue</div>
+            <ul class="list-group" >
+
+                    <li class="list-group-item">进程1</li>
+
+
+                    <li class="list-group-item">进程2</li>
+
+
+                    <li class="list-group-item">进程3</li>
+
+
+                    <li class="list-group-item">进程4</li>
+
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="btn btn-lg btn-default position1" >Time past 1s</button>
+    <button type="button" class="btn btn-lg btn-primary position2" >Add new progress</button>
+    <button type="button" class="btn btn-lg btn-success position3" >Suspend a progress</button>
+    <button type="button" class="btn btn-lg btn-info position4" >Resume a suspend progress</button>
+</div>
+</body>
+<script>
+    var app = new Vue(
+        {
+            el:'#vueRoot',
+            data:{
+                executeList:[],
+                readyList:[],
+                suspendList:[],
+            }
+        }
+    )
+</script>
+</html>
