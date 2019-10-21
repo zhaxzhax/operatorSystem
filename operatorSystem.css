@@ -7,7 +7,7 @@
 #jobReady{
     position: absolute;
     left: 35%;
-    top:30%;
+    top:40%;
     z-index: 1;
 }
 #jobRun{
@@ -19,7 +19,7 @@
 #jobSuspend{
     position: absolute;
     left: 70%;
-    top:20%;
+    top:30%;
     z-index: 1;
 }
 .position1{
@@ -44,5 +44,11 @@
     position: absolute;
     left: 70%;
     bottom: 1%;
+    z-index: 1;
+}
+.positionT{
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
     z-index: 1;
 }

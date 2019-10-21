@@ -23,19 +23,19 @@
 
 }
 .b1{
-    transform: rotate(210deg);
-    left: 51%;
-    top: 18%;
+    transform: rotate(225deg);
+    left: 49%;
+    top: 20%;
 }
 .b2{
-    transform: rotate(210deg);
+    transform: rotate(225deg);
     left: 55%;
     top: 11%;
 }
 .b3{
-    transform: rotate(210deg);
-    left: 47%;
-    top: 25%;
+    transform: rotate(225deg);
+    left: 43%;
+    top: 29%;
 }
 
 .arrow-container{
